@@ -1,16 +1,31 @@
 {
-  "logo": "",
-  "heroBackground": "",
-  "email": "hello@limbixcut.com",
-  "phone": "+66 00 000 0000",
-  "address": "Bangkok, Thailand",
-  "instagram": "",
   "facebook": "",
   "copyright": "© 2026 LIMBIX CUT. All rights reserved.",
-  "clients": ["NETFLIX", "WeTV", "Production Co.", "Studio Name", "Client Name"],
+  "heroBackground": "",
+  "clients": [
+    "NETFLIX",
+    "WeTV",
+    "Production Co.",
+    "Studio Name",
+    "Client Name"
+  ],
+  "logo": "",
+  "phone": "+66 85 809 2529",
+  "instagram": "",
+  "address": "Bangkok, Thailand",
+  "email": "info@limbixcut.com",
   "stats": [
-    { "num": "50+", "label": "Projects cut" },
-    { "num": "2021", "label": "Founded" },
-    { "num": "TH / EN", "label": "Bilingual team" }
+    {
+      "num": "50+",
+      "label": "Projects cut"
+    },
+    {
+      "num": "2021",
+      "label": "Founded"
+    },
+    {
+      "num": "TH / EN",
+      "label": "Bilingual team"
+    }
   ]
 }
