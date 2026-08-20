@@ -1,0 +1,79 @@
+# IMPORTANT — read README.md before using this file.
+# Netlify's old "Git Gateway" login (git-gateway) is discontinued for new sites as of 2026,
+# so this file uses a placeholder backend below. Follow README.md step 3 to get your real
+# backend block from DecapBridge (decapbridge.com, free for small sites) and paste it in,
+# replacing everything between the two "backend:" markers.
+backend:
+  name: git-gateway   # <-- REPLACE this whole "backend:" block with the one DecapBridge gives you
+  branch: main
+
+# Where uploaded images (project thumbnails) are stored in the repo,
+# and the URL path the site uses to reach them.
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+# Thai labels are shown in the admin UI; English stays underneath in the repo files.
+locale: "en"
+
+collections:
+  - name: "site"
+    label: "จัดการเว็บไซต์ LIMBIX CUT"
+    files:
+      - name: "projects"
+        label: "ผลงาน (หน้า Work)"
+        file: "content/projects.json"
+        fields:
+          - label: "รายการผลงานทั้งหมด"
+            name: "items"
+            widget: "list"
+            label_singular: "ผลงาน 1 ชิ้น"
+            summary: "{{title}} — {{category}}"
+            fields:
+              - { label: "ชื่อโปรเจกต์", name: "title", widget: "string" }
+              - label: "ประเภท"
+                name: "category"
+                widget: "select"
+                options: ["Films", "Series", "Commercials", "Music Videos"]
+              - { label: "ลูกค้า / แพลตฟอร์ม", name: "client", widget: "string", required: false }
+              - { label: "ปี", name: "year", widget: "string", required: false }
+              - label: "ลิงก์วิดีโอ (YouTube, Vimeo ฯลฯ)"
+                name: "videoUrl"
+                widget: "string"
+                required: false
+                hint: "วางลิงก์ตัวอย่าง/เทรลเลอร์ กดที่การ์ดผลงานบนเว็บแล้วจะเปิดลิงก์นี้"
+              - label: "รูปปก (ไม่ใส่ก็ได้ ระบบจะใช้สีพื้นแทน)"
+                name: "thumbnail"
+                widget: "image"
+                required: false
+
+      - name: "settings"
+        label: "ข้อมูลติดต่อ & สถิติหน้าแรก"
+        file: "content/settings.json"
+        fields:
+          - label: "โลโก้บนเมนู (แถบบนสุดของเว็บ)"
+            name: "logo"
+            widget: "image"
+            required: false
+            hint: "ไม่ใส่ = ใช้โลโก้ LIMBIX CUT เดิม (ไฟล์ LC_Original ที่ให้มา) ถ้าอัปโหลดใหม่ ระบบจะโชว์ตามไฟล์นั้นตรงๆ ไม่มีคำว่า LIMBIX CUT ไปต่อท้ายให้ ดังนั้นอัปโหลดไฟล์ที่มีทั้งไอคอนและตัวหนังสือครบในตัวเองเลย (แนะนำไฟล์พื้นหลังโปร่งใส แนวนอน) จุดนี้จะเปลี่ยนแค่ที่เมนูบนสุดเท่านั้น ไอคอน X เล็กๆ ที่จุดอื่น (ลายน้ำ Hero, ท้ายเว็บ, favicon) จะไม่เปลี่ยนตาม"
+          - label: "รูปพื้นหลัง Hero (หน้าแรกสุด)"
+            name: "heroBackground"
+            widget: "image"
+            required: false
+            hint: "ไม่ใส่ = ใช้พื้นดำ + โลโก้จางๆ แบบเดิม ถ้าอัปโหลดรูป จะโชว์รูปนี้เป็นพื้นหลังแทน (แนะนำรูปแนวนอน ความละเอียดสูง)"
+          - { label: "อีเมล", name: "email", widget: "string" }
+          - { label: "เบอร์โทร", name: "phone", widget: "string" }
+          - { label: "ที่อยู่", name: "address", widget: "string" }
+          - { label: "ลิงก์ Instagram", name: "instagram", widget: "string", required: false }
+          - { label: "ลิงก์ Facebook", name: "facebook", widget: "string", required: false }
+          - { label: "ข้อความลิขสิทธิ์ท้ายเว็บ", name: "copyright", widget: "string" }
+          - label: "รายชื่อลูกค้า/แพลตฟอร์ม (แสดงใต้ Hero)"
+            name: "clients"
+            widget: "list"
+            hint: "พิมพ์ชื่อลูกค้าหรือแพลตฟอร์มทีละบรรทัด เช่น NETFLIX, WeTV"
+          - label: "ตัวเลขสถิติ (แสดงใน Hero)"
+            name: "stats"
+            widget: "list"
+            summary: "{{num}} — {{label}}"
+            fields:
+              - { label: "ตัวเลข", name: "num", widget: "string" }
+              - { label: "คำอธิบาย", name: "label", widget: "string" }

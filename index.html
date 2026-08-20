@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIMBIX CUT — Film &amp; Series Editing Studio</title>
+<meta name="description" content="LIMBIX CUT is a Bangkok-based team of editors shaping feature films, series, commercials and music videos.">
+<link rel="icon" id="favicon" href="assets/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="#" class="logo">
+        <img class="logo-img nav-logo" src="assets/logo-wordmark-dark.png" alt="LIMBIX CUT">
+      </a>
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a href="#contact" class="nav-cta">Start a project</a>
+      <button class="menu-btn">☰</button>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-photo" id="hero-photo"></div>
+  <img class="hero-bg-x" id="hero-bg-x" src="assets/logo-icon.png" alt="">
+  <div class="wrap hero-inner">
+    <div class="eyebrow">Film &amp; series editing studio — Bangkok, since 2021</div>
+    <h1>We cut for <span class="accent">emotion</span>, not just picture.</h1>
+    <p class="hero-sub">LIMBIX CUT is a team of editors shaping feature films, series, commercials and music videos — named for the limbic system, because we believe every great cut starts with a feeling.</p>
+    <div class="hero-actions">
+      <a href="#work" class="btn">See our work</a>
+      <a href="#contact" class="btn outline">Start a project</a>
+    </div>
+    <div class="hero-meta" id="hero-stats">
+      <!-- filled from content/settings.json -->
+    </div>
+  </div>
+</section>
+
+<div class="clients">
+  <div class="wrap">
+    <span class="tag">Work trusted by</span>
+    <div class="client-names" id="client-names">
+      <!-- filled from content/settings.json -->
+    </div>
+  </div>
+</div>
+
+<section class="section tint" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="sec-num">— 01 SELECTED WORK</span>
+        <h2>Recent cuts</h2>
+      </div>
+      <p>A running edit of features, series, commercials and music videos — color-tagged the way your brand palette already tags its own marks.</p>
+    </div>
+
+    <div class="filters" id="filters">
+      <!-- filled by script.js -->
+    </div>
+
+    <div class="grid" id="work-grid">
+      <!-- filled from content/projects.json -->
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="wrap about">
+    <div class="about-visual"><img src="assets/logo-icon.png" alt="Limbix Cut mark"></div>
+    <div>
+      <span class="sec-num">— 02 PHILOSOPHY</span>
+      <p class="lead">Every scene has a heartbeat. Our job is to find it, protect it, and cut around it.</p>
+      <p>Founded in Bangkok in 2021, LIMBIX CUT works across features, series, commercials and music videos for regional and international platforms. The name comes from the limbic system — the part of the brain that governs emotion — because we believe pacing and rhythm are emotional decisions before they're technical ones.</p>
+      <p>Replace this paragraph with your real studio bio, awards, and the platforms you've worked with. (Edit in <code>content/settings.json</code> → <code>aboutText</code>, or ask Claude.)</p>
+      <div class="stat-row">
+        <div><span class="n">4</span><span class="l">Content types</span></div>
+        <div><span class="n">2</span><span class="l">Streaming platforms</span></div>
+        <div><span class="n">5★</span><span class="l">Client rating</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section tint" id="team">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="sec-num">— 03 TEAM</span>
+        <h2>The editors</h2>
+      </div>
+      <p>Swap in real headshots and titles for each editor and producer. (Ask Claude to wire this up to the CMS too, if you want to edit it yourself.)</p>
+    </div>
+    <div class="team-grid">
+      <div class="member"><div class="photo"></div><h4>Name Surname</h4><p>Lead Editor</p></div>
+      <div class="member"><div class="photo"></div><h4>Name Surname</h4><p>Editor</p></div>
+      <div class="member"><div class="photo"></div><h4>Name Surname</h4><p>Editor</p></div>
+      <div class="member"><div class="photo"></div><h4>Name Surname</h4><p>Producer</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" id="contact">
+  <div class="wrap">
+    <h2>Got a cut that needs a <span class="accent">heartbeat</span>?</h2>
+    <a href="#" id="cta-email" class="btn">Email the studio →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-col">
+        <h5>Studio</h5>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#team">Team</a>
+      </div>
+      <div class="foot-col" id="foot-contact">
+        <h5>Contact</h5>
+        <!-- filled from content/settings.json -->
+      </div>
+      <div class="foot-col" id="foot-follow">
+        <h5>Follow</h5>
+        <!-- filled from content/settings.json -->
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span style="display:flex; align-items:center; gap:8px;"><img src="assets/logo-icon.png" alt=""> <span id="foot-copyright">© 2026 LIMBIX CUT. All rights reserved.</span></span>
+      <span>Site by LIMBIX CUT · content editable at <a href="admin/">/admin</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
