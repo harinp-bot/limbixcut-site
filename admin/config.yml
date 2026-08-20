@@ -4,9 +4,14 @@
 # backend block from DecapBridge (decapbridge.com, free for small sites) and paste it in,
 # replacing everything between the two "backend:" markers.
 backend:
-  name: git-gateway   # <-- REPLACE this whole "backend:" block with the one DecapBridge gives you
+  name: git-gateway
+  repo: harinp-bot/limbixcut-site
   branch: main
-
+  auth_type: pkce
+  base_url: https://auth.decapbridge.com
+  auth_endpoint: /sites/8a7aa9c9-3e9a-442d-a53d-d80f9d7343e0/pkce
+  auth_token_endpoint: /sites/8a7aa9c9-3e9a-442d-a53d-d80f9d7343e0/token
+  gateway_url: https://gateway.decapbridge.com
 # Where uploaded images (project thumbnails) are stored in the repo,
 # and the URL path the site uses to reach them.
 media_folder: "assets/uploads"
