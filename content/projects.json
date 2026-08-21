@@ -33,20 +33,28 @@
       "thumbnail": "/assets/uploads/441210637_768198742142972_7877419949599497040_n.jpg"
     },
     {
-      "title": "Project Title Five",
+      "title": "AFTER DARK",
       "category": "Series",
-      "client": "WeTV",
-      "year": "2024",
-      "videoUrl": "",
-      "thumbnail": ""
+      "client": "WeTV : Directors: Anucha Boonyawatana, Chayan Laoyodtrakool, Chatichai Worapiankul Editors: Harin Paesongthai, Nisarat Meechok, Asamapon Samakphan, Chaleamchon Natipat, Weerapat Tembundit",
+      "year": "2021",
+      "videoUrl": "https://www.youtube.com/watch?v=RLaY85pmfi0",
+      "thumbnail": "/assets/uploads/120928209_1256060368092661_2450439768966934182_o.jpg"
     },
     {
-      "title": "Project Title Six",
-      "category": "Films",
-      "client": "Client name",
-      "year": "2023",
-      "videoUrl": "",
-      "thumbnail": ""
+      "title": "TWO PILLOWS AND A LOST SOUL",
+      "category": "Series",
+      "client": "Director: Sivaroj Kongsakul Editors: Harin Paesongthai, Nisarat Meechok, Jinnaphat Thammasan",
+      "year": "2020",
+      "videoUrl": "https://www.youtube.com/watch?v=LXXfZyL3NNk",
+      "thumbnail": "/assets/uploads/83818412_593419967883716_2172188196807376896_o.jpg"
+    },
+    {
+      "thumbnail": "/assets/uploads/57253541_414218449137203_1032022942638145536_n.jpg",
+      "title": "NYCTOPHOBIA",
+      "category": "Series",
+      "client": "Directors: Pantham Thongsang, Sivaroj Kongsakul Editors: Harin Paesongthai, Chaleamchon Natipat, Weerapat Tembundit",
+      "year": "2019",
+      "videoUrl": "https://www.youtube.com/watch?v=PjB_BlHufWE"
     }
   ]
 }
