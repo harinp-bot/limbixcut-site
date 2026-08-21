@@ -66,6 +66,11 @@ collections:
                 name: "photo"
                 widget: "image"
                 required: false
+              - label: "ลิงก์ IMDb (หรือลิงก์โปรไฟล์อื่นที่อยากให้กดเข้าไปดู)"
+                name: "imdbUrl"
+                widget: "string"
+                required: false
+                hint: "ใส่แล้วการ์ดชื่อคนนี้จะกดเปิดลิงก์ในแท็บใหม่ได้เลย ไม่ใส่ = การ์ดกดไม่ได้เหมือนเดิม"
 
       - name: "settings"
         label: "ข้อมูลติดต่อ & สถิติหน้าแรก"
