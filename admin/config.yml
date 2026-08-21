@@ -4,14 +4,9 @@
 # backend block from DecapBridge (decapbridge.com, free for small sites) and paste it in,
 # replacing everything between the two "backend:" markers.
 backend:
-  name: git-gateway
-  repo: harinp-bot/limbixcut-site
+  name: git-gateway   # <-- REPLACE this whole "backend:" block with the one DecapBridge gives you
   branch: main
-  auth_type: pkce
-  base_url: https://auth.decapbridge.com
-  auth_endpoint: /sites/8a7aa9c9-3e9a-442d-a53d-d80f9d7343e0/pkce
-  auth_token_endpoint: /sites/8a7aa9c9-3e9a-442d-a53d-d80f9d7343e0/token
-  gateway_url: https://gateway.decapbridge.com
+
 # Where uploaded images (project thumbnails) are stored in the repo,
 # and the URL path the site uses to reach them.
 media_folder: "assets/uploads"
@@ -51,10 +46,46 @@ collections:
                 widget: "image"
                 required: false
 
+      - name: "team"
+        label: "ทีมงาน (หน้า Team)"
+        file: "content/team.json"
+        fields:
+          - label: "รายชื่อทีมงานทั้งหมด"
+            name: "items"
+            widget: "list"
+            label_singular: "สมาชิก 1 คน"
+            summary: "{{name}} — {{title}}"
+            fields:
+              - { label: "ชื่อ-นามสกุล", name: "name", widget: "string" }
+              - { label: "ตำแหน่ง", name: "title", widget: "string" }
+              - label: "รูปภาพ (ไม่ใส่ก็ได้ ระบบจะใช้กล่องพื้นเทาแทน)"
+                name: "photo"
+                widget: "image"
+                required: false
+
       - name: "settings"
         label: "ข้อมูลติดต่อ & สถิติหน้าแรก"
         file: "content/settings.json"
         fields:
+          - label: "ข้อความใต้หัวข้อ Recent Cuts (หน้า Work)"
+            name: "workIntro"
+            widget: "text"
+          - label: "หัวข้อใหญ่ในส่วน Philosophy"
+            name: "aboutLead"
+            widget: "text"
+          - label: "เนื้อหาย่อหน้า Philosophy (ประวัติสตูดิโอ)"
+            name: "aboutText"
+            widget: "text"
+          - label: "ตัวเลขสถิติในส่วน Philosophy"
+            name: "aboutStats"
+            widget: "list"
+            summary: "{{num}} — {{label}}"
+            fields:
+              - { label: "ตัวเลข", name: "num", widget: "string" }
+              - { label: "คำอธิบาย", name: "label", widget: "string" }
+          - label: "ข้อความใต้หัวข้อ The Editors (หน้า Team)"
+            name: "teamIntro"
+            widget: "text"
           - label: "โลโก้บนเมนู (แถบบนสุดของเว็บ)"
             name: "logo"
             widget: "image"
