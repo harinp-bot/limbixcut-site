@@ -45,6 +45,7 @@ header{
 nav{display:flex; align-items:center; justify-content:space-between; padding:16px 0;}
 .logo{display:flex; align-items:center; gap:10px;}
 .logo img{height:38px; width:auto;}
+.nav-menu{display:flex; align-items:center; gap:34px;}
 .nav-links{display:flex; gap:34px; font-size:13px; letter-spacing:0.04em; text-transform:uppercase; font-weight:600;}
 .nav-links a{opacity:0.7; transition:opacity .2s; border-bottom:2px solid transparent;}
 .nav-links a:hover{opacity:1; border-color:var(--teal);}
@@ -145,6 +146,7 @@ nav{display:flex; align-items:center; justify-content:space-between; padding:16p
 /* PORTFOLIO GRID */
 .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
 .grid.is-empty{display:block; text-align:center; padding:40px 0; color:var(--muted);}
+.work-more{display:flex; justify-content:center; margin-top:44px;}
 .card{
   background:var(--card); border:1px solid var(--line); border-radius:6px; overflow:hidden;
   cursor:pointer; transition:transform .25s, box-shadow .25s;
@@ -222,8 +224,35 @@ footer{padding:60px 0 40px; background:var(--paper);}
 .foot-bottom img{height:16px;}
 
 @media(max-width:900px){
-  .nav-links, .nav-cta{display:none;}
+  .nav-menu{display:none;}
   .menu-btn{display:block;}
+  header.nav-open .nav-menu{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    position:absolute;
+    top:100%; left:0; right:0;
+    background:var(--paper);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:8px 28px 20px;
+  }
+  header.nav-open .nav-links{
+    flex-direction:column;
+    gap:0;
+  }
+  header.nav-open .nav-links a{
+    padding:14px 0;
+    border-bottom:1px solid var(--line);
+    opacity:1;
+  }
+  header.nav-open .nav-links a:last-child{border-bottom:none;}
+  header.nav-open .nav-cta{
+    margin-top:14px;
+    justify-content:center;
+    text-align:center;
+  }
   .grid{grid-template-columns:repeat(2,1fr);}
   .about{grid-template-columns:1fr;}
   .team-grid{grid-template-columns:repeat(2,1fr);}
