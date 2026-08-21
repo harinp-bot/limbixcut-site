@@ -9,12 +9,20 @@
       "thumbnail": "/assets/uploads/462142764_861635479465964_7776482302995354414_n.jpg"
     },
     {
-      "title": "BANGKOK BREAKING",
+      "thumbnail": "/assets/uploads/2lokd_4f.jpeg",
+      "title": "Remember You",
       "category": "Series",
-      "client": "Netflix : Director: Kongkiat Khomsiri Editors: Harin Paesongthai, Weerapat Tembundit",
+      "client": "Director: Sivaroj Kongsakul Editors: Harin Paesongthai, Thunchanok Suthanintr, Mitphon Ekphasuphorn, Natthapat Kraitrudphon, Nisarat Meechok, Wachrakorn Thaweesab, Jinnaphat Thammasan",
       "year": "2021",
-      "videoUrl": "https://www.youtube.com/watch?v=ux4dnACqOik",
-      "thumbnail": "/assets/uploads/th_bangkok-breaking_main_vertical_rgb_pre.jpeg"
+      "videoUrl": "https://www.youtube.com/watch?v=dMdtJhpCigE"
+    },
+    {
+      "title": "Doctor Climax",
+      "category": "Series",
+      "client": "Netflix : Directors: Kongdej Jaturanrasamee, Pairach Khumwan Editors: Chonlasit Upanigkit, Harin Paesongthai, Weerapat Tembundit, Wisarut Deelorm",
+      "year": "2024",
+      "videoUrl": "https://www.youtube.com/watch?v=wwH9MeucXCA",
+      "thumbnail": "/assets/uploads/441210637_768198742142972_7877419949599497040_n.jpg"
     },
     {
       "title": "Hiddengem Season 2",
@@ -25,12 +33,12 @@
       "thumbnail": "/assets/uploads/504068710_1261374672019881_5945571161698328725_n.jpg"
     },
     {
-      "title": "Doctor Climax",
+      "title": "BANGKOK BREAKING",
       "category": "Series",
-      "client": "Netflix : Directors: Kongdej Jaturanrasamee, Pairach Khumwan Editors: Chonlasit Upanigkit, Harin Paesongthai, Weerapat Tembundit, Wisarut Deelorm",
-      "year": "2024",
-      "videoUrl": "https://www.youtube.com/watch?v=wwH9MeucXCA",
-      "thumbnail": "/assets/uploads/441210637_768198742142972_7877419949599497040_n.jpg"
+      "client": "Netflix : Director: Kongkiat Khomsiri Editors: Harin Paesongthai, Weerapat Tembundit",
+      "year": "2021",
+      "videoUrl": "https://www.youtube.com/watch?v=ux4dnACqOik",
+      "thumbnail": "/assets/uploads/th_bangkok-breaking_main_vertical_rgb_pre.jpeg"
     },
     {
       "title": "AFTER DARK",
