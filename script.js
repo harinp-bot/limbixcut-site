@@ -59,7 +59,28 @@ initMobileNav();
 
 const ALL_VIEW_LIMIT = 9; // how many cards show under "All" before "See more"
 
-function renderProjects(items) {
+// Pinned/Featured projects always float to the top; everything else sorts by
+// year, newest first. Projects with a missing or non-numeric year sink to the
+// bottom instead of breaking the sort.
+function sortProjects(items) {
+  return [...items].sort((a, b) => {
+    const aPinned = a.pinned ? 1 : 0;
+    const bPinned = b.pinned ? 1 : 0;
+    if (aPinned !== bPinned) return bPinned - aPinned;
+
+    const aYear = parseInt(a.year, 10);
+    const bYear = parseInt(b.year, 10);
+    const aValid = !isNaN(aYear);
+    const bValid = !isNaN(bYear);
+    if (aValid && bValid) return bYear - aYear;
+    if (aValid) return -1;
+    if (bValid) return 1;
+    return 0;
+  });
+}
+
+function renderProjects(rawItems) {
+  const items = sortProjects(rawItems);
   const grid = document.getElementById("work-grid");
   const filtersWrap = document.getElementById("filters");
   let allExpanded = false; // resets to collapsed whenever "All" is re-entered fresh
