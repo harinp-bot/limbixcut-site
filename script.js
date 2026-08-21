@@ -21,9 +21,48 @@ function el(tag, attrs = {}, html = "") {
   return node;
 }
 
+function initMobileNav() {
+  const header = document.querySelector("header");
+  const menuBtn = document.getElementById("menu-btn");
+  const navMenu = document.getElementById("nav-menu");
+  if (!header || !menuBtn || !navMenu) return;
+
+  function closeMenu() {
+    header.classList.remove("nav-open");
+    menuBtn.setAttribute("aria-expanded", "false");
+    menuBtn.textContent = "☰";
+  }
+  function openMenu() {
+    header.classList.add("nav-open");
+    menuBtn.setAttribute("aria-expanded", "true");
+    menuBtn.textContent = "✕";
+  }
+
+  menuBtn.addEventListener("click", () => {
+    if (header.classList.contains("nav-open")) closeMenu();
+    else openMenu();
+  });
+
+  // Tapping a nav link (Work / About / Team / Contact / Start a project)
+  // closes the dropdown so it doesn't stay open over the section you jumped to.
+  navMenu.addEventListener("click", e => {
+    if (e.target.closest("a")) closeMenu();
+  });
+
+  // If the screen is resized/rotated past the mobile breakpoint while the
+  // menu happens to be open, don't leave it stuck open in desktop layout.
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 900) closeMenu();
+  });
+}
+initMobileNav();
+
+const ALL_VIEW_LIMIT = 9; // how many cards show under "All" before "See more"
+
 function renderProjects(items) {
   const grid = document.getElementById("work-grid");
   const filtersWrap = document.getElementById("filters");
+  let allExpanded = false; // resets to collapsed whenever "All" is re-entered fresh
 
   const categoriesPresent = CATEGORY_ORDER.filter(c => items.some(p => p.category === c))
     .concat([...new Set(items.map(p => p.category))].filter(c => !CATEGORY_ORDER.includes(c)));
@@ -39,6 +78,9 @@ function renderProjects(items) {
 
   function draw(filter) {
     grid.innerHTML = "";
+    const oldMoreWrap = document.getElementById("work-more");
+    if (oldMoreWrap) oldMoreWrap.remove();
+
     const visible = filter === "All" ? items : items.filter(p => p.category === filter);
     if (!visible.length) {
       grid.classList.add("is-empty");
@@ -46,7 +88,13 @@ function renderProjects(items) {
       return;
     }
     grid.classList.remove("is-empty");
-    visible.forEach(p => {
+
+    // Only the "All" tab truncates — picking a specific category always shows
+    // every project in it, since that's already a filtered, shorter list.
+    const isTruncated = filter === "All" && !allExpanded && visible.length > ALL_VIEW_LIMIT;
+    const toRender = isTruncated ? visible.slice(0, ALL_VIEW_LIMIT) : visible;
+
+    toRender.forEach(p => {
       const s = styleFor(p.category);
       const card = el("a", {
         class: "card",
@@ -70,6 +118,17 @@ function renderProjects(items) {
         </div>`;
       grid.appendChild(card);
     });
+
+    if (isTruncated) {
+      const moreWrap = el("div", { id: "work-more", class: "work-more" });
+      const moreBtn = el("button", { class: "btn outline" }, `See all ${visible.length} projects →`);
+      moreBtn.addEventListener("click", () => {
+        allExpanded = true;
+        draw("All");
+      });
+      moreWrap.appendChild(moreBtn);
+      grid.insertAdjacentElement("afterend", moreWrap);
+    }
   }
 
   draw("All");
@@ -78,6 +137,7 @@ function renderProjects(items) {
     if (!btn) return;
     filtersWrap.querySelectorAll("button").forEach(b => b.removeAttribute("data-active"));
     btn.setAttribute("data-active", "true");
+    if (btn.dataset.filter === "All") allExpanded = false; // fresh click on All always starts collapsed
     draw(btn.dataset.filter);
   });
 }
