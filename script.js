@@ -89,12 +89,16 @@ function renderTeam(items) {
     const photoStyle = m.photo
       ? ` style="background-image:url('${m.photo}'); background-size:cover; background-position:center;"`
       : "";
+    const tag = m.imdbUrl ? "a" : "div";
+    const linkAttrs = m.imdbUrl
+      ? ` href="${m.imdbUrl}" target="_blank" rel="noopener noreferrer"`
+      : "";
     return `
-      <div class="member">
+      <${tag} class="member"${linkAttrs}>
         <div class="photo"${photoStyle}></div>
         <h4>${m.name || "Name Surname"}</h4>
         <p>${m.title || ""}</p>
-      </div>`;
+      </${tag}>`;
   }).join("");
 }
 
