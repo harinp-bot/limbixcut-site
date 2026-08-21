@@ -1,8 +1,39 @@
 {
   "items": [
-    { "name": "Name Surname", "title": "Lead Editor", "photo": "" },
-    { "name": "Name Surname", "title": "Editor", "photo": "" },
-    { "name": "Name Surname", "title": "Editor", "photo": "" },
-    { "name": "Name Surname", "title": "Producer", "photo": "" }
+    {
+      "name": " Harin Paesongthai (JOE)",
+      "title": "Founder and Lead Editor",
+      "photo": "/assets/uploads/joe2.jpg"
+    },
+    {
+      "name": "Sornphet Wutthikornchaisakul (SORN)",
+      "title": "Editor and Assistant Editor",
+      "photo": "/assets/uploads/sorn.jpg"
+    },
+    {
+      "name": " Thunchanok Suthanintr (BELLE)",
+      "title": "Editor",
+      "photo": "/assets/uploads/belle.jpg"
+    },
+    {
+      "title": "Editor",
+      "name": "Frame Wachrakorn",
+      "photo": "/assets/uploads/frame.jpg"
+    },
+    {
+      "name": " Mitphon Ekphasuphorn (MIT)",
+      "title": "Editor",
+      "photo": "/assets/uploads/mit.jpg"
+    },
+    {
+      "name": "Chankanet Leksomboon (GUY)",
+      "title": "Editor and Assistant Editor",
+      "photo": "/assets/uploads/guy.jpg"
+    },
+    {
+      "title": "Assistant Editor",
+      "name": " Thanapat Ngamphol (NICE)",
+      "photo": "/assets/uploads/nice.jpg"
+    }
   ]
 }
