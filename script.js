@@ -82,7 +82,42 @@ function renderProjects(items) {
   });
 }
 
+function renderTeam(items) {
+  const grid = document.getElementById("team-grid");
+  if (!grid) return;
+  grid.innerHTML = (items || []).map(m => {
+    const photoStyle = m.photo
+      ? ` style="background-image:url('${m.photo}'); background-size:cover; background-position:center;"`
+      : "";
+    return `
+      <div class="member">
+        <div class="photo"${photoStyle}></div>
+        <h4>${m.name || "Name Surname"}</h4>
+        <p>${m.title || ""}</p>
+      </div>`;
+  }).join("");
+}
+
 function renderSettings(s) {
+  const workIntro = document.getElementById("work-intro");
+  if (workIntro) workIntro.textContent = s.workIntro || "";
+
+  const aboutLead = document.getElementById("about-lead");
+  if (aboutLead) aboutLead.textContent = s.aboutLead || "";
+
+  const aboutText = document.getElementById("about-text");
+  if (aboutText) aboutText.textContent = s.aboutText || "";
+
+  const aboutStats = document.getElementById("about-stats");
+  if (aboutStats) {
+    aboutStats.innerHTML = (s.aboutStats || []).map(st =>
+      `<div><span class="n">${st.num}</span><span class="l">${st.label}</span></div>`
+    ).join("");
+  }
+
+  const teamIntro = document.getElementById("team-intro");
+  if (teamIntro) teamIntro.textContent = s.teamIntro || "";
+
   // Logo — this only replaces the nav bar logo, which is meant to be your real,
   // fully-designed lockup (icon + wordmark already combined in the image itself).
   // Nothing extra is added next to it in HTML/CSS, so whatever you upload here is
@@ -132,8 +167,10 @@ function renderSettings(s) {
 
 Promise.all([
   fetch("content/projects.json").then(r => r.json()).catch(() => ({ items: [] })),
-  fetch("content/settings.json").then(r => r.json()).catch(() => ({}))
-]).then(([projects, settings]) => {
+  fetch("content/settings.json").then(r => r.json()).catch(() => ({})),
+  fetch("content/team.json").then(r => r.json()).catch(() => ({ items: [] }))
+]).then(([projects, settings, team]) => {
   renderProjects(projects.items || []);
   renderSettings(settings);
+  renderTeam(team.items || []);
 });

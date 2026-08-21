@@ -64,7 +64,7 @@
         <span class="sec-num">— 01 SELECTED WORK</span>
         <h2>Recent cuts</h2>
       </div>
-      <p>A running edit of features, series, commercials and music videos — color-tagged the way your brand palette already tags its own marks.</p>
+      <p id="work-intro"><!-- filled from content/settings.json --></p>
     </div>
 
     <div class="filters" id="filters">
@@ -82,14 +82,9 @@
     <div class="about-visual"><img src="assets/logo-icon.png" alt="Limbix Cut mark"></div>
     <div>
       <span class="sec-num">— 02 PHILOSOPHY</span>
-      <p class="lead">Every scene has a heartbeat. Our job is to find it, protect it, and cut around it.</p>
-      <p>Founded in Bangkok in 2021, LIMBIX CUT works across features, series, commercials and music videos for regional and international platforms. The name comes from the limbic system — the part of the brain that governs emotion — because we believe pacing and rhythm are emotional decisions before they're technical ones.</p>
-      <p>Replace this paragraph with your real studio bio, awards, and the platforms you've worked with. (Edit in <code>content/settings.json</code> → <code>aboutText</code>, or ask Claude.)</p>
-      <div class="stat-row">
-        <div><span class="n">4</span><span class="l">Content types</span></div>
-        <div><span class="n">2</span><span class="l">Streaming platforms</span></div>
-        <div><span class="n">5★</span><span class="l">Client rating</span></div>
-      </div>
+      <p class="lead" id="about-lead"><!-- filled from content/settings.json --></p>
+      <p id="about-text"><!-- filled from content/settings.json --></p>
+      <div class="stat-row" id="about-stats"><!-- filled from content/settings.json --></div>
     </div>
   </div>
 </section>
@@ -101,13 +96,10 @@
         <span class="sec-num">— 03 TEAM</span>
         <h2>The editors</h2>
       </div>
-      <p>Swap in real headshots and titles for each editor and producer. (Ask Claude to wire this up to the CMS too, if you want to edit it yourself.)</p>
+      <p id="team-intro"><!-- filled from content/settings.json --></p>
     </div>
-    <div class="team-grid">
-      <div class="member"><div class="photo"></div><h4>Name Surname</h4><p>Lead Editor</p></div>
-      <div class="member"><div class="photo"></div><h4>Name Surname</h4><p>Editor</p></div>
-      <div class="member"><div class="photo"></div><h4>Name Surname</h4><p>Editor</p></div>
-      <div class="member"><div class="photo"></div><h4>Name Surname</h4><p>Producer</p></div>
+    <div class="team-grid" id="team-grid">
+      <!-- filled from content/team.json -->
     </div>
   </div>
 </section>
