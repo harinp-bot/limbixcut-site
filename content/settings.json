@@ -1,33 +1,17 @@
 {
+  "logo": "",
+  "heroBackground": "",
+  "email": "info@limbixcut.com",
+  "phone": "+66 85 809 2529",
+  "address": "Bangkok, Thailand",
+  "instagram": "https://instagram.com/limbixcut",
   "facebook": "https://www.facebook.com/limbixcutcutcut",
   "copyright": "© 2026 LIMBIX CUT. All rights reserved.",
-  "heroBackground": "",
-  "clients": [
-    "NETFLIX",
-    "M STUDIO",
-    "GMM STUDIOS",
-    "True CJ",
-    "WeTV",
-    "BrandThink Cinema",
-    "N8"
-  ],
-  "logo": "",
-  "phone": "+66 85 809 2529",
-  "instagram": "https://instagram.com/limbixcut",
-  "address": "Bangkok, Thailand",
-  "email": "info@limbixcut.com",
-  "stats": [
-    {
-      "num": "50+",
-      "label": "Projects cut"
-    },
-    {
-      "num": "2021",
-      "label": "Founded"
-    },
-    {
-      "num": "TH / EN",
-      "label": "Bilingual team"
-    }
-  ]
+  "clients": ["NETFLIX", "M STUDIO", "GMM STUDIOS", "True CJ", "WeTV", "BrandThink Cinema", "N8"],
+  "stats": [{"num":"50+","label":"Projects cut"},{"num":"2021","label":"Founded"},{"num":"TH / EN","label":"Bilingual team"}],
+  "workIntro": "A running edit of features, series, commercials and music videos — color-tagged the way your brand palette already tags its own marks.",
+  "aboutLead": "Every scene has a heartbeat. Our job is to find it, protect it, and cut around it.",
+  "aboutText": "Founded in Bangkok in 2021, LIMBIX CUT works across features, series, commercials and music videos for regional and international platforms. The name comes from the limbic system — the part of the brain that governs emotion — because we believe pacing and rhythm are emotional decisions before they're technical ones.",
+  "aboutStats": [{"num":"4","label":"Content types"},{"num":"2","label":"Streaming platforms"},{"num":"5★","label":"Client rating"}],
+  "teamIntro": "Swap in real headshots and titles for each editor and producer."
 }
