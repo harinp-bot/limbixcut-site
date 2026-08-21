@@ -1,12 +1,12 @@
 {
   "items": [
     {
-      "title": "Project Title One",
-      "category": "Films",
-      "client": "Client name",
-      "year": "2025",
-      "videoUrl": "",
-      "thumbnail": ""
+      "title": "Don’t Come Home",
+      "category": "Series",
+      "client": "Director: Woottidanai Intarakaset Editors: Harin Paesongthai, Asamapon Samakphan",
+      "year": "2024",
+      "videoUrl": "https://www.youtube.com/watch?v=OcQVa8c9deQ",
+      "thumbnail": "/assets/uploads/462142764_861635479465964_7776482302995354414_n.jpg"
     },
     {
       "title": "Project Title Two",
