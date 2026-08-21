@@ -1,11 +1,15 @@
-# IMPORTANT — read README.md before using this file.
-# Netlify's old "Git Gateway" login (git-gateway) is discontinued for new sites as of 2026,
-# so this file uses a placeholder backend below. Follow README.md step 3 to get your real
-# backend block from DecapBridge (decapbridge.com, free for small sites) and paste it in,
-# replacing everything between the two "backend:" markers.
+# Auth is handled by DecapBridge (decapbridge.com) — this backend block is the real one
+# generated for this site. Do NOT replace it with a fresh copy of this file from Claude
+# without checking this block first; ask Claude to merge instead.
 backend:
-  name: git-gateway   # <-- REPLACE this whole "backend:" block with the one DecapBridge gives you
+  name: git-gateway
+  repo: harinp-bot/limbixcut-site
   branch: main
+  auth_type: pkce
+  base_url: https://auth.decapbridge.com
+  auth_endpoint: /sites/8a7aa9c9-3e9a-442d-a53d-d80f9d7343e0/pkce
+  auth_token_endpoint: /sites/8a7aa9c9-3e9a-442d-a53d-d80f9d7343e0/token
+  gateway_url: https://gateway.decapbridge.com
 
 # Where uploaded images (project thumbnails) are stored in the repo,
 # and the URL path the site uses to reach them.
