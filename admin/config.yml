@@ -39,7 +39,17 @@ collections:
                 widget: "select"
                 options: ["Films", "Series", "Commercials", "Music Videos"]
               - { label: "ลูกค้า / แพลตฟอร์ม", name: "client", widget: "string", required: false }
-              - { label: "ปี", name: "year", widget: "string", required: false }
+              - label: "ปี"
+                name: "year"
+                widget: "string"
+                required: false
+                hint: "ใส่เป็นตัวเลข เช่น 2024 — ผลงานจะเรียงจากปีใหม่ไปเก่าอัตโนมัติ"
+              - label: "ปักหมุดไว้บนสุด (Featured)"
+                name: "pinned"
+                widget: "boolean"
+                default: false
+                required: false
+                hint: "ติ๊กแล้วผลงานชิ้นนี้จะอยู่บนสุดเสมอ ไม่ว่าปีจะเก่าแค่ไหน (ผลงานที่ปักหมุดหลายชิ้น จะเรียงกันเองตามปีเหมือนกัน) ผลงานที่เหลือเรียงตามปีใหม่ไปเก่าอัตโนมัติ ไม่ต้องจัดลำดับเอง"
               - label: "ลิงก์วิดีโอ (YouTube, Vimeo ฯลฯ)"
                 name: "videoUrl"
                 widget: "string"
