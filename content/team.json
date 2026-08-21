@@ -3,37 +3,44 @@
     {
       "name": " Harin Paesongthai (JOE)",
       "title": "Founder and Lead Editor",
-      "photo": "/assets/uploads/joe2.jpg"
+      "photo": "/assets/uploads/joe2.jpg",
+      "imdbUrl": "https://www.imdb.com/name/nm7652070/"
     },
     {
       "name": "Sornphet Wutthikornchaisakul (SORN)",
       "title": "Editor and Assistant Editor",
-      "photo": "/assets/uploads/sorn.jpg"
+      "photo": "/assets/uploads/sorn.jpg",
+      "imdbUrl": "https://www.imdb.com/name/nm16391962/"
     },
     {
       "name": " Thunchanok Suthanintr (BELLE)",
       "title": "Editor",
-      "photo": "/assets/uploads/belle.jpg"
+      "photo": "/assets/uploads/belle.jpg",
+      "imdbUrl": "https://www.imdb.com/name/nm10727180/"
     },
     {
       "title": "Editor",
       "name": "Frame Wachrakorn",
-      "photo": "/assets/uploads/frame.jpg"
+      "photo": "/assets/uploads/frame.jpg",
+      "imdbUrl": "https://www.imdb.com/name/nm12194335/"
     },
     {
       "name": " Mitphon Ekphasuphorn (MIT)",
       "title": "Editor",
-      "photo": "/assets/uploads/mit.jpg"
+      "photo": "/assets/uploads/mit.jpg",
+      "imdbUrl": "https://www.imdb.com/name/nm12971400/"
     },
     {
       "name": "Chankanet Leksomboon (GUY)",
       "title": "Editor and Assistant Editor",
-      "photo": "/assets/uploads/guy.jpg"
+      "photo": "/assets/uploads/guy.jpg",
+      "imdbUrl": "https://www.imdb.com/name/nm11866896/"
     },
     {
       "title": "Assistant Editor",
       "name": " Thanapat Ngamphol (NICE)",
-      "photo": "/assets/uploads/nice.jpg"
+      "photo": "/assets/uploads/nice.jpg",
+      "imdbUrl": "https://www.imdb.com/name/nm17551114/"
     }
   ]
 }
