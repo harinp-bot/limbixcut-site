@@ -68,7 +68,8 @@
       "category": "Films",
       "client": "Netflix : Director: Nontawat Numbenchapol Editor: Harin Paesongthai",
       "year": "2023",
-      "videoUrl": "https://youtu.be/cJKt1Ni-3kk?si=KJLUMy2uGVWQc_ZF"
+      "videoUrl": "https://youtu.be/cJKt1Ni-3kk?si=KJLUMy2uGVWQc_ZF",
+      "pinned": true
     },
     {
       "title": "Doctor Climax",
@@ -84,7 +85,8 @@
       "title": "RedLife",
       "client": "Director: Ekalak Klunson Editor: Harin Paesongthai",
       "year": "2023",
-      "videoUrl": "https://youtu.be/qc3r0XAiiK4?si=zoxm-i8uKIWEqDLj"
+      "videoUrl": "https://youtu.be/qc3r0XAiiK4?si=zoxm-i8uKIWEqDLj",
+      "pinned": true
     },
     {
       "thumbnail": "/assets/uploads/130125616_111812900771793_2179011717701685746_o-967979de77c945728d9766f599035e23.jpg",
