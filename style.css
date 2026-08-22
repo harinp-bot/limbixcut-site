@@ -121,8 +121,7 @@ nav{display:flex; align-items:center; justify-content:space-between; padding:16p
 .clients .tag{font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); white-space:nowrap;}
 .client-names{display:flex; gap:38px; flex-wrap:wrap; align-items:center;}
 .client-names span{font-family:'Poppins',sans-serif; font-weight:700; font-size:16px; letter-spacing:0.02em; color:#fff; opacity:0.45;}
-.client-names img{height:26px; width:auto; max-width:120px; object-fit:contain; filter:grayscale(1); opacity:0.6; transition:filter .2s, opacity .2s;}
-.client-names img:hover{filter:none; opacity:1;}
+.client-names img{height:30px; width:auto; max-width:130px; object-fit:contain;}
 
 /* SECTION HEADER */
 .section{padding:100px 0;}
