@@ -59,6 +59,22 @@ collections:
                 name: "thumbnail"
                 widget: "image"
                 required: false
+              - label: "ตำแหน่งที่โชว์ของรูปปก"
+                name: "thumbnailPosition"
+                widget: "select"
+                required: false
+                default: "center"
+                options:
+                  - { label: "กึ่งกลาง (ค่าเริ่มต้น)", value: "center" }
+                  - { label: "บน", value: "top" }
+                  - { label: "ล่าง", value: "bottom" }
+                  - { label: "ซ้าย", value: "left" }
+                  - { label: "ขวา", value: "right" }
+                  - { label: "บนซ้าย", value: "top left" }
+                  - { label: "บนขวา", value: "top right" }
+                  - { label: "ล่างซ้าย", value: "bottom left" }
+                  - { label: "ล่างขวา", value: "bottom right" }
+                hint: "รูปปกจะถูก crop ให้เต็มกรอบเสมอ — ถ้าจุดสำคัญของรูป (เช่น หน้าคนในโปสเตอร์) โดนตัดออกไป ลองเปลี่ยนตำแหน่งตรงนี้ดูจนกว่าจะเห็นจุดที่ต้องการ"
 
       - name: "team"
         label: "ทีมงาน (หน้า Team)"
@@ -86,9 +102,50 @@ collections:
         label: "ข้อมูลติดต่อ & สถิติหน้าแรก"
         file: "content/settings.json"
         fields:
+          # ── เมนู (บนสุดของทุกหน้า + คอลัมน์ Studio ท้ายเว็บ) ──
+          - { label: "เมนู — Work", name: "navWork", widget: "string" }
+          - { label: "เมนู — About", name: "navAbout", widget: "string" }
+          - { label: "เมนู — Team", name: "navTeam", widget: "string" }
+          - { label: "เมนู — Contact", name: "navContact", widget: "string" }
+          - { label: "ปุ่มเมนู (มุมขวาบน)", name: "navCta", widget: "string" }
+
+          # ── ส่วน Hero (หน้าแรกสุด) ──
+          - label: "ข้อความเล็กเหนือหัวข้อใหญ่ (Hero)"
+            name: "heroEyebrow"
+            widget: "string"
+          - label: "หัวข้อใหญ่ Hero — ข้อความก่อนคำที่ไฮไลต์สี"
+            name: "heroTitleBefore"
+            widget: "string"
+            hint: "เช่น 'We cut for ' — คำถัดไปจะเป็นคำที่ขึ้นเป็นสีฟ้า"
+          - label: "หัวข้อใหญ่ Hero — คำที่ไฮไลต์สี"
+            name: "heroTitleAccent"
+            widget: "string"
+          - label: "หัวข้อใหญ่ Hero — ข้อความหลังคำที่ไฮไลต์สี"
+            name: "heroTitleAfter"
+            widget: "string"
+          - label: "ย่อหน้าใต้หัวข้อใหญ่ (Hero)"
+            name: "heroSub"
+            widget: "text"
+          - label: "ปุ่ม Hero ปุ่มที่ 1 (ลิงก์ไปหมวดผลงาน)"
+            name: "heroBtnWork"
+            widget: "string"
+          - label: "ปุ่ม Hero ปุ่มที่ 2 (ลิงก์ไปติดต่อ)"
+            name: "heroBtnContact"
+            widget: "string"
+
+          # ── แถบ Work trusted by ──
+          - label: "ข้อความนำหน้ารายชื่อลูกค้า"
+            name: "clientsLabel"
+            widget: "string"
+
+          # ── ส่วน Work (ผลงาน) ──
+          - { label: "เลขหัวข้อ Work (เช่น — 01 SELECTED WORK)", name: "workSecNum", widget: "string" }
           - label: "ข้อความใต้หัวข้อ Recent Cuts (หน้า Work)"
             name: "workIntro"
             widget: "text"
+
+          # ── ส่วน Philosophy (About) ──
+          - { label: "เลขหัวข้อ Philosophy (เช่น — 02 PHILOSOPHY)", name: "aboutSecNum", widget: "string" }
           - label: "หัวข้อใหญ่ในส่วน Philosophy"
             name: "aboutLead"
             widget: "text"
@@ -102,9 +159,43 @@ collections:
             fields:
               - { label: "ตัวเลข", name: "num", widget: "string" }
               - { label: "คำอธิบาย", name: "label", widget: "string" }
+
+          # ── ส่วน Team ──
+          - { label: "เลขหัวข้อ Team (เช่น — 03 TEAM)", name: "teamSecNum", widget: "string" }
+          - { label: "หัวข้อใหญ่ส่วน Team (เช่น The Editors)", name: "teamHeading", widget: "string" }
           - label: "ข้อความใต้หัวข้อ The Editors (หน้า Team)"
             name: "teamIntro"
             widget: "text"
+
+          # ── แถบ CTA (ก่อนท้ายเว็บ) ──
+          - label: "หัวข้อ CTA — ข้อความก่อนคำที่ไฮไลต์สี"
+            name: "ctaHeadingBefore"
+            widget: "string"
+            hint: "เช่น 'Got a cut that needs a '"
+          - label: "หัวข้อ CTA — คำที่ไฮไลต์สี"
+            name: "ctaHeadingAccent"
+            widget: "string"
+          - label: "หัวข้อ CTA — ข้อความหลังคำที่ไฮไลต์สี"
+            name: "ctaHeadingAfter"
+            widget: "string"
+            hint: "เช่น '?'"
+          - { label: "ข้อความปุ่ม CTA", name: "ctaButtonText", widget: "string" }
+
+          # ── ท้ายเว็บ (Footer) ──
+          - { label: "หัวข้อคอลัมน์ Studio", name: "footStudioHeading", widget: "string" }
+          - { label: "หัวข้อคอลัมน์ Contact", name: "footContactHeading", widget: "string" }
+          - { label: "หัวข้อคอลัมน์ Follow", name: "footFollowHeading", widget: "string" }
+          - label: "ข้อความบรรทัดล่างสุดของเว็บ"
+            name: "footTagline"
+            widget: "string"
+            hint: "ลิงก์ '/admin' ต่อท้ายให้อัตโนมัติ ไม่ต้องพิมพ์เอง"
+
+          # ── SEO (ชื่อแท็บเบราว์เซอร์ / ผลค้นหา Google) ──
+          - { label: "ชื่อเว็บ (โชว์บนแท็บเบราว์เซอร์ + Google)", name: "seoTitle", widget: "string" }
+          - label: "คำอธิบายเว็บ (โชว์ใต้ชื่อเว็บใน Google)"
+            name: "seoDescription"
+            widget: "text"
+
           - label: "โลโก้บนเมนู (แถบบนสุดของเว็บ)"
             name: "logo"
             widget: "image"
@@ -124,7 +215,15 @@ collections:
           - label: "รายชื่อลูกค้า/แพลตฟอร์ม (แสดงใต้ Hero)"
             name: "clients"
             widget: "list"
-            hint: "พิมพ์ชื่อลูกค้าหรือแพลตฟอร์มทีละบรรทัด เช่น NETFLIX, WeTV"
+            summary: "{{name}}"
+            hint: "ใส่โลโก้ได้เลย ถ้าช่องไหนยังไม่ใส่โลโก้ ระบบจะโชว์เป็นชื่อตัวหนังสือแทนไปก่อน"
+            fields:
+              - { label: "ชื่อ (ใช้เป็นชื่อสำรองถ้ายังไม่มีโลโก้ และใช้เป็น alt text ของรูป)", name: "name", widget: "string" }
+              - label: "โลโก้ (ไม่ใส่ก็ได้)"
+                name: "logo"
+                widget: "image"
+                required: false
+                hint: "แนะนำไฟล์พื้นหลังโปร่งใส (PNG) แนวนอน โลโก้จะแสดงเป็นขาวดำจางๆ แล้วเข้มขึ้นตอนเอาเมาส์ชี้"
           - label: "ตัวเลขสถิติ (แสดงใน Hero)"
             name: "stats"
             widget: "list"
