@@ -21,12 +21,12 @@
       </a>
       <div class="nav-menu" id="nav-menu">
         <div class="nav-links">
-          <a href="#work">Work</a>
-          <a href="#about">About</a>
-          <a href="#team">Team</a>
-          <a href="#contact">Contact</a>
+          <a href="#work" class="lbl-work">Work</a>
+          <a href="#about" class="lbl-about">About</a>
+          <a href="#team" class="lbl-team">Team</a>
+          <a href="#contact" class="lbl-contact">Contact</a>
         </div>
-        <a href="#contact" class="nav-cta">Start a project</a>
+        <a href="#contact" class="nav-cta lbl-nav-cta">Start a project</a>
       </div>
       <button class="menu-btn" id="menu-btn" aria-label="Toggle menu" aria-expanded="false">☰</button>
     </nav>
@@ -37,12 +37,12 @@
   <div class="hero-photo" id="hero-photo"></div>
   <img class="hero-bg-x" id="hero-bg-x" src="assets/logo-icon.png" alt="">
   <div class="wrap hero-inner">
-    <div class="eyebrow">Film &amp; series editing studio — Bangkok, since 2021</div>
-    <h1>We cut for <span class="accent">emotion</span>, not just picture.</h1>
-    <p class="hero-sub">LIMBIX CUT is a team of editors shaping feature films, series, commercials and music videos — named for the limbic system, because we believe every great cut starts with a feeling.</p>
+    <div class="eyebrow" id="hero-eyebrow"><!-- filled from content/settings.json --></div>
+    <h1><span id="hero-title-before"></span><span class="accent" id="hero-title-accent"></span><span id="hero-title-after"></span></h1>
+    <p class="hero-sub" id="hero-sub"><!-- filled from content/settings.json --></p>
     <div class="hero-actions">
-      <a href="#work" class="btn">See our work</a>
-      <a href="#contact" class="btn outline">Start a project</a>
+      <a href="#work" class="btn" id="hero-btn-work">See our work</a>
+      <a href="#contact" class="btn outline" id="hero-btn-contact">Start a project</a>
     </div>
     <div class="hero-meta" id="hero-stats">
       <!-- filled from content/settings.json -->
@@ -52,7 +52,7 @@
 
 <div class="clients">
   <div class="wrap">
-    <span class="tag">Work trusted by</span>
+    <span class="tag" id="clients-label">Work trusted by</span>
     <div class="client-names" id="client-names">
       <!-- filled from content/settings.json -->
     </div>
@@ -63,7 +63,7 @@
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <span class="sec-num">— 01 SELECTED WORK</span>
+        <span class="sec-num" id="work-secnum">— 01 SELECTED WORK</span>
         <h2>Recent cuts</h2>
       </div>
       <p id="work-intro"><!-- filled from content/settings.json --></p>
@@ -83,7 +83,7 @@
   <div class="wrap about">
     <div class="about-visual"><img src="assets/logo-icon.png" alt="Limbix Cut mark"></div>
     <div>
-      <span class="sec-num">— 02 PHILOSOPHY</span>
+      <span class="sec-num" id="about-secnum">— 02 PHILOSOPHY</span>
       <p class="lead" id="about-lead"><!-- filled from content/settings.json --></p>
       <p id="about-text"><!-- filled from content/settings.json --></p>
       <div class="stat-row" id="about-stats"><!-- filled from content/settings.json --></div>
@@ -95,8 +95,8 @@
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <span class="sec-num">— 03 TEAM</span>
-        <h2>The editors</h2>
+        <span class="sec-num" id="team-secnum">— 03 TEAM</span>
+        <h2 id="team-heading">The editors</h2>
       </div>
       <p id="team-intro"><!-- filled from content/settings.json --></p>
     </div>
@@ -108,7 +108,7 @@
 
 <section class="cta-band" id="contact">
   <div class="wrap">
-    <h2>Got a cut that needs a <span class="accent">heartbeat</span>?</h2>
+    <h2><span id="cta-heading-before"></span><span class="accent" id="cta-heading-accent"></span><span id="cta-heading-after"></span></h2>
     <a href="#" id="cta-email" class="btn">Email the studio →</a>
   </div>
 </section>
@@ -117,10 +117,10 @@
   <div class="wrap">
     <div class="foot-top">
       <div class="foot-col">
-        <h5>Studio</h5>
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#team">Team</a>
+        <h5 id="foot-studio-heading">Studio</h5>
+        <a href="#work" class="lbl-work">Work</a>
+        <a href="#about" class="lbl-about">About</a>
+        <a href="#team" class="lbl-team">Team</a>
       </div>
       <div class="foot-col" id="foot-contact">
         <h5>Contact</h5>
@@ -133,7 +133,7 @@
     </div>
     <div class="foot-bottom">
       <span style="display:flex; align-items:center; gap:8px;"><img src="assets/logo-icon.png" alt=""> <span id="foot-copyright">© 2026 LIMBIX CUT. All rights reserved.</span></span>
-      <span>Site by LIMBIX CUT · content editable at <a href="admin/">/admin</a></span>
+      <span id="foot-tagline">Site by LIMBIX CUT · content editable at <a href="admin/">/admin</a></span>
     </div>
   </div>
 </footer>

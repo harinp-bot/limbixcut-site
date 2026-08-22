@@ -125,7 +125,7 @@ function renderProjects(rawItems) {
         rel: "noopener"
       });
       const thumbStyle = p.thumbnail
-        ? `background-image:url('${p.thumbnail}')`
+        ? `background-image:url('${p.thumbnail}'); background-position:${p.thumbnailPosition || "center"};`
         : `--c1:${s.c1}; --c2:${s.c2};`;
       card.innerHTML = `
         <div class="thumb" style="${thumbStyle}">
@@ -183,7 +183,59 @@ function renderTeam(items) {
   }).join("");
 }
 
+// Sets textContent on every element matching `selector` (there can be more
+// than one — e.g. the same nav label appears in the header AND the footer).
+function setAllText(selector, value) {
+  if (value === undefined || value === null) return;
+  document.querySelectorAll(selector).forEach(el => { el.textContent = value; });
+}
+function setText(id, value) {
+  const el = document.getElementById(id);
+  if (el && value !== undefined && value !== null) el.textContent = value;
+}
+
 function renderSettings(s) {
+  // Nav labels — shared between the header menu and the footer "Studio" column.
+  setAllText(".lbl-work", s.navWork);
+  setAllText(".lbl-about", s.navAbout);
+  setAllText(".lbl-team", s.navTeam);
+  setAllText(".lbl-contact", s.navContact);
+  setAllText(".lbl-nav-cta", s.navCta);
+
+  // Hero
+  setText("hero-eyebrow", s.heroEyebrow);
+  setText("hero-title-before", s.heroTitleBefore);
+  setText("hero-title-accent", s.heroTitleAccent);
+  setText("hero-title-after", s.heroTitleAfter);
+  setText("hero-sub", s.heroSub);
+  setText("hero-btn-work", s.heroBtnWork);
+  setText("hero-btn-contact", s.heroBtnContact);
+
+  // Client strip
+  setText("clients-label", s.clientsLabel);
+
+  // Section labels
+  setText("work-secnum", s.workSecNum);
+  setText("about-secnum", s.aboutSecNum);
+  setText("team-secnum", s.teamSecNum);
+  setText("team-heading", s.teamHeading);
+
+  // CTA band
+  setText("cta-heading-before", s.ctaHeadingBefore);
+  setText("cta-heading-accent", s.ctaHeadingAccent);
+  setText("cta-heading-after", s.ctaHeadingAfter);
+  const ctaEmailBtn = document.getElementById("cta-email");
+  if (ctaEmailBtn && s.ctaButtonText) ctaEmailBtn.textContent = s.ctaButtonText;
+
+  // Footer headings
+  setText("foot-studio-heading", s.footStudioHeading);
+  // s.footTagline itself is applied further down, alongside the fixed "/admin" link.
+
+  // Browser tab title / search-result description
+  if (s.seoTitle) document.title = s.seoTitle;
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc && s.seoDescription) metaDesc.setAttribute("content", s.seoDescription);
+
   const workIntro = document.getElementById("work-intro");
   if (workIntro) workIntro.textContent = s.workIntro || "";
 
@@ -226,12 +278,22 @@ function renderSettings(s) {
     `<div><span class="num">${st.num}</span><span class="lbl">${st.label}</span></div>`
   ).join("");
 
+  // Client logos — each entry can be { name, logo } (preferred) or a plain
+  // string left over from before logos were supported; either way, if no
+  // logo image is set yet we fall back to showing the name as text so
+  // nothing goes blank while logos are still being uploaded.
   const clientNames = document.getElementById("client-names");
-  clientNames.innerHTML = (s.clients || []).map(c => `<span>${c}</span>`).join("");
+  clientNames.innerHTML = (s.clients || []).map(c => {
+    const client = typeof c === "string" ? { name: c, logo: "" } : (c || {});
+    const name = client.name || "";
+    return client.logo
+      ? `<img src="${client.logo}" alt="${name}">`
+      : `<span>${name}</span>`;
+  }).join("");
 
   const footContact = document.getElementById("foot-contact");
   footContact.innerHTML = `
-    <h5>Contact</h5>
+    <h5>${s.footContactHeading || "Contact"}</h5>
     ${s.email ? `<a href="mailto:${s.email}">${s.email}</a>` : ""}
     ${s.phone ? `<p>${s.phone}</p>` : ""}
     ${s.address ? `<p>${s.address}</p>` : ""}`;
@@ -241,13 +303,19 @@ function renderSettings(s) {
     s.instagram ? `<a href="${s.instagram}" target="_blank" rel="noopener">Instagram</a>` : "",
     s.facebook ? `<a href="${s.facebook}" target="_blank" rel="noopener">Facebook</a>` : ""
   ].filter(Boolean).join("");
-  footFollow.innerHTML = `<h5>Follow</h5>${socialLinks || "<p>—</p>"}`;
+  footFollow.innerHTML = `<h5>${s.footFollowHeading || "Follow"}</h5>${socialLinks || "<p>—</p>"}`;
 
   const ctaEmail = document.getElementById("cta-email");
   if (s.email) ctaEmail.href = `mailto:${s.email}`;
 
   const footCopyright = document.getElementById("foot-copyright");
   if (s.copyright) footCopyright.textContent = s.copyright;
+
+  // foot-tagline keeps its "/admin" link fixed — only the leading phrase is editable.
+  const footTagline = document.getElementById("foot-tagline");
+  if (footTagline && s.footTagline) {
+    footTagline.innerHTML = `${s.footTagline} <a href="admin/">/admin</a>`;
+  }
 }
 
 Promise.all([
