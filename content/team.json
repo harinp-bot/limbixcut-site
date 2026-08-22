@@ -7,10 +7,10 @@
       "imdbUrl": "https://www.imdb.com/name/nm7652070/"
     },
     {
-      "name": "Sornphet Wutthikornchaisakul (SORN)",
-      "title": "Editor and Assistant Editor",
-      "photo": "/assets/uploads/sorn.jpg",
-      "imdbUrl": "https://www.imdb.com/name/nm16391962/"
+      "name": "Nisarat Meechok (BEER)",
+      "title": "Editor",
+      "photo": "/assets/uploads/beer.jpg",
+      "imdbUrl": "https://www.imdb.com/name/nm10833705"
     },
     {
       "name": " Thunchanok Suthanintr (BELLE)",
@@ -29,6 +29,12 @@
       "title": "Editor",
       "photo": "/assets/uploads/mit.jpg",
       "imdbUrl": "https://www.imdb.com/name/nm12971400/"
+    },
+    {
+      "name": "Sornphet Wutthikornchaisakul (SORN)",
+      "title": "Editor and Assistant Editor",
+      "photo": "/assets/uploads/sorn.jpg",
+      "imdbUrl": "https://www.imdb.com/name/nm16391962/"
     },
     {
       "name": "Chankanet Leksomboon (GUY)",
