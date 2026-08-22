@@ -17,15 +17,15 @@
     },
     {
       "name": "M STUDIO",
-      "logo": "/assets/uploads/mstudio_logo.png"
+      "logo": "/assets/uploads/m_stu.png"
     },
     {
       "name": "GMM STUDIOS",
-      "logo": "/assets/uploads/304865443_487441143388494_212155564804256597_n.jpg"
+      "logo": "/assets/uploads/gmm.png"
     },
     {
       "name": "True CJ",
-      "logo": "/assets/uploads/images.png"
+      "logo": "/assets/uploads/true.png"
     },
     {
       "name": "WeTV",
@@ -33,11 +33,15 @@
     },
     {
       "name": "BrandThink Cinema",
-      "logo": "/assets/uploads/395592786_350965820778316_4208643007819052688_n_edited.jpg"
+      "logo": "/assets/uploads/brandthink.png"
     },
     {
       "name": "N8",
-      "logo": "/assets/uploads/514252577_122186282588319528_1604634848185953502_n.jpg"
+      "logo": "/assets/uploads/n8.png"
+    },
+    {
+      "name": "1%",
+      "logo": "/assets/uploads/1.png"
     }
   ],
   "aboutLead": "Every scene has a heartbeat. Our job is to find it, protect it, and cut around it.",
