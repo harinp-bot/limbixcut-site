@@ -111,6 +111,26 @@ nav{display:flex; align-items:center; justify-content:space-between; padding:16p
 .hero-meta .num{font-family:'Poppins',sans-serif; font-weight:800; font-size:28px; display:block;}
 .hero-meta .lbl{font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:0.05em;}
 
+/* AWARDS STRIP */
+.awards{
+  border-bottom:1px solid var(--line);
+  padding:22px 0;
+  background:var(--paper);
+}
+.awards.is-empty{display:none;}
+.awards .wrap{display:flex; align-items:center; gap:40px; flex-wrap:wrap; justify-content:space-between;}
+.awards .tag{font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); white-space:nowrap;}
+.award-badges{display:flex; gap:12px; flex-wrap:wrap;}
+.award-badge{
+  display:inline-flex; align-items:center;
+  border:1px solid var(--cyan); border-radius:999px;
+  padding:8px 18px; font-size:11px; letter-spacing:0.05em;
+  text-transform:uppercase; font-weight:700; color:var(--cyan);
+  white-space:nowrap; transition:.2s;
+}
+a.award-badge{cursor:pointer;}
+a.award-badge:hover{background:var(--cyan); color:var(--black);}
+
 /* CLIENT STRIP */
 .clients{
   border-bottom:1px solid var(--line);

@@ -211,6 +211,26 @@ function renderSettings(s) {
   setText("hero-btn-work", s.heroBtnWork);
   setText("hero-btn-contact", s.heroBtnContact);
 
+  // Awards & festival selections strip — hidden entirely until at least one
+  // award is added via /admin, so an empty list doesn't leave a blank bar.
+  setText("awards-label", s.awardsLabel);
+  const awardsStrip = document.getElementById("awards-strip");
+  const awardBadges = document.getElementById("award-badges");
+  const awards = (s.awards || []).filter(a => a && a.text);
+  if (awardsStrip && awardBadges) {
+    if (awards.length) {
+      awardsStrip.classList.remove("is-empty");
+      awardBadges.innerHTML = awards.map(a => {
+        const tag = a.link ? "a" : "span";
+        const linkAttrs = a.link ? ` href="${a.link}" target="_blank" rel="noopener noreferrer"` : "";
+        return `<${tag} class="award-badge"${linkAttrs}>${a.text}</${tag}>`;
+      }).join("");
+    } else {
+      awardsStrip.classList.add("is-empty");
+      awardBadges.innerHTML = "";
+    }
+  }
+
   // Client strip
   setText("clients-label", s.clientsLabel);
 
