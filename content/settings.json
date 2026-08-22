@@ -10,8 +10,6 @@
   "copyright": "© 2026 LIMBIX CUT. All rights reserved.",
   "heroBackground": "",
   "heroTitleAccent": "emotion",
-  "awardsLabel": "Awards & Selections",
-  "awards": [],
   "clients": [
     {
       "name": "NETFLIX",
@@ -64,6 +62,35 @@
   "heroBtnWork": "See our work",
   "navWork": "Work",
   "address": "Bangkok, Thailand",
+  "awards": [
+    {
+      "text": "alumni Berlinale Talents 2017 part of the Berlin International Film Festival"
+    },
+    {
+      "text": "alumni CHANEL X BIFF Asian Film Academy 2023 part of the Busan International Film Festival"
+    },
+    {
+      "text": "Winner Best Film Editing Asean International Film Festival & Awards 2023 (FACES OF ANNE)"
+    },
+    {
+      "text": "Winner Best Film Editing Thailand National Film Association Awards 29th (WHERE WE BELONG)"
+    },
+    {
+      "text": "Winner Best Film Editing Bangkok Critics Assembly Awards 28th and 29th (WHERE WE BELONG, SCHOOL TOWN KING)"
+    },
+    {
+      "text": "Winner Best Film Editing STARPICS Thai Film Awards 18th (SCHOOL TOWN KING)"
+    },
+    {
+      "text": "Nominated Best Editing Ciclope International Festival of Craft (TVC: The Goddess of Cobalt Flame)"
+    },
+    {
+      "text": "Winner The Vichitmatra Award and Nominated White Elephant Award: The 18th Thai Short Film & Video Festival (Scent of the Morning Sun)"
+    },
+    {
+      "text": "Winner Kodak Filmschool Competition and 2nd Place Winner White Elephant Award: The 17th Thai Short Film & Video Festival, Thailand (The Pilgrim)"
+    }
+  ],
   "aboutText": "Founded in Bangkok in 2021, LIMBIX CUT works across features, series, commercials and music videos for regional and international platforms. The name comes from the limbic system the part of the brain that governs emotion because we believe pacing and rhythm are emotional decisions before they're technical ones.",
   "workIntro": "A running edit of features, series, commercials and music videos",
   "seoTitle": "LIMBIX CUT — Film & Series Editing Studio",
@@ -74,6 +101,7 @@
   "footStudioHeading": "Studio",
   "heroBtnContact": "Start a project",
   "heroTitleAfter": ", not just picture.",
+  "awardsLabel": "Awards & Selections",
   "stats": [
     {
       "num": "50+",
