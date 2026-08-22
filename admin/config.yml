@@ -133,6 +133,27 @@ collections:
             name: "heroBtnContact"
             widget: "string"
 
+          # ── แถบรางวัล/เทศกาล (ใต้ Hero บนสุด) ──
+          - label: "ข้อความนำหน้าแถบรางวัล"
+            name: "awardsLabel"
+            widget: "string"
+          - label: "รายการรางวัล/เทศกาลที่ได้รับ"
+            name: "awards"
+            widget: "list"
+            required: false
+            summary: "{{text}}"
+            hint: "ถ้าไม่ใส่รายการไหนเลย แถบนี้จะไม่โชว์บนเว็บอัตโนมัติ พอเพิ่มรายการแรกจะขึ้นทันที"
+            fields:
+              - label: "ข้อความที่โชว์ (พิมพ์รวมในบรรทัดเดียว)"
+                name: "text"
+                widget: "string"
+                hint: "เช่น 'OFFICIAL SELECTION — Busan IFF 2022' หรือ 'BEST EDITING — Thailand Film Awards 2021'"
+              - label: "ลิงก์ (ไม่ใส่ก็ได้)"
+                name: "link"
+                widget: "string"
+                required: false
+                hint: "ใส่แล้วป้ายนี้จะกดเปิดลิงก์ในแท็บใหม่ได้ เช่น ลิงก์ข่าว หรือหน้าเทศกาล"
+
           # ── แถบ Work trusted by ──
           - label: "ข้อความนำหน้ารายชื่อลูกค้า"
             name: "clientsLabel"
