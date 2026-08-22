@@ -7,7 +7,8 @@
       "year": "2026",
       "videoUrl": "https://www.youtube.com/watch?v=C2y050MMHYA",
       "client": "Director: Pongpat Wachirabunjong Editor: Harin Paesongthai",
-      "pinned": true
+      "pinned": true,
+      "thumbnailPosition": "top"
     },
     {
       "thumbnail": "/assets/uploads/aaaabbodyczzhtlqs3cg1wujswk0ys4fdgew5jyosdvnwhshtigebmmjhcom8oxxh8vjpl4kols-m_zzbip57uq2n7uurcq7xaj01odi.jpg",
@@ -16,7 +17,8 @@
       "client": "Netflix : Director: Taweewat Wantha Editors: Harin Paesongthai, Thunchanok Suthanintr Assistant Editor : Sornphet Wutthikornchaisakul",
       "year": "2026",
       "videoUrl": "https://www.youtube.com/watch?v=y1Qq_kPL5UU",
-      "pinned": true
+      "pinned": true,
+      "thumbnailPosition": "top"
     },
     {
       "thumbnail": "/assets/uploads/728333843_10234097543762446_6596676259369238133_n.jpg",
@@ -60,7 +62,8 @@
       "category": "Series",
       "client": "Director: Sivaroj Kongsakul Editors: Harin Paesongthai, Thunchanok Suthanintr, Mitphon Ekphasuphorn, Natthapat Kraitrudphon, Nisarat Meechok, Wachrakorn Thaweesab, Jinnaphat Thammasan",
       "year": "2021",
-      "videoUrl": "https://www.youtube.com/watch?v=dMdtJhpCigE"
+      "videoUrl": "https://www.youtube.com/watch?v=dMdtJhpCigE",
+      "thumbnailPosition": "top"
     },
     {
       "thumbnail": "/assets/uploads/img_9473.jpg",
@@ -111,7 +114,8 @@
       "client": "Netflix : Director: Kongkiat Khomsiri Editors: Harin Paesongthai, Weerapat Tembundit",
       "year": "2021",
       "videoUrl": "https://www.youtube.com/watch?v=ux4dnACqOik",
-      "thumbnail": "/assets/uploads/th_bangkok-breaking_main_vertical_rgb_pre.jpeg"
+      "thumbnail": "/assets/uploads/th_bangkok-breaking_main_vertical_rgb_pre.jpeg",
+      "thumbnailPosition": "top"
     },
     {
       "title": "AFTER DARK",
@@ -135,7 +139,8 @@
       "client": "Director: Sivaroj Kongsakul Editors: Harin Paesongthai, Nisarat Meechok, Jinnaphat Thammasan",
       "year": "2020",
       "videoUrl": "https://www.youtube.com/watch?v=LXXfZyL3NNk",
-      "thumbnail": "/assets/uploads/83818412_593419967883716_2172188196807376896_o.jpg"
+      "thumbnail": "/assets/uploads/83818412_593419967883716_2172188196807376896_o.jpg",
+      "thumbnailPosition": "top"
     },
     {
       "thumbnail": "/assets/uploads/57253541_414218449137203_1032022942638145536_n.jpg",
@@ -159,7 +164,8 @@
       "category": "Films",
       "client": "Director: Pongpat Wachirabunjong Editors: Lee Chatametikool, Harin Paesongthai",
       "year": "2018",
-      "videoUrl": "https://www.youtube.com/watch?v=UPjuBJri7-8"
+      "videoUrl": "https://www.youtube.com/watch?v=UPjuBJri7-8",
+      "thumbnailPosition": "top"
     },
     {
       "thumbnail": "/assets/uploads/pff0v36xac80r6hzloc-o.jpg",
@@ -175,7 +181,8 @@
       "category": "Films",
       "client": "Directors: Monkum Khukhuntin, Harin Paesongthai Editor: Harin Paesongthai",
       "year": "2014",
-      "videoUrl": "https://www.viddsee.com/video/scent-of-the-morning-sun/cepvg"
+      "videoUrl": "https://www.viddsee.com/video/scent-of-the-morning-sun/cepvg",
+      "thumbnailPosition": "top"
     },
     {
       "thumbnail": "/assets/uploads/img_6831.jpg",
@@ -206,7 +213,8 @@
       "category": "Films",
       "client": "Director: Panu Aree Editors: Harin Paesongthai, Nisarat Meechok",
       "year": "2024",
-      "videoUrl": "https://www.youtube.com/watch?v=sm7Pt_DyRB8"
+      "videoUrl": "https://www.youtube.com/watch?v=sm7Pt_DyRB8",
+      "thumbnailPosition": "bottom"
     },
     {
       "thumbnail": "/assets/uploads/img_2613.jpg",
@@ -230,7 +238,8 @@
       "title": "TEN YEARS THAILAND",
       "client": "Directors: Aditya Assarat, Wisit Sasanatieng, Chulayarnnon Siriphol, Apichatpong Weerasethakul Editors: Lee Chatametikool, Kamontorn Eakwattanakij, Harin Paesongthai, Apichatpong Weerasethakul",
       "year": "2018",
-      "videoUrl": "https://www.youtube.com/watch?v=MWM0mmtfOOg"
+      "videoUrl": "https://www.youtube.com/watch?v=MWM0mmtfOOg",
+      "thumbnailPosition": "bottom"
     },
     {
       "thumbnail": "/assets/uploads/bkk-rats.png",
@@ -238,7 +247,8 @@
       "title": "Bangkok Rats",
       "client": "Director: Poj Pitakjamnong Editor: Harin Paesongthai",
       "year": "2022",
-      "videoUrl": "https://vimeo.com/743611619"
+      "videoUrl": "https://vimeo.com/743611619",
+      "thumbnailPosition": "top"
     },
     {
       "thumbnail": "/assets/uploads/b4e18219576315.562dcbac87c2c.jpg",
@@ -246,7 +256,8 @@
       "title": "THE PILGRIM",
       "client": "Director: Harin Paesongthai Editor: Harin Paesongthai",
       "year": "2013",
-      "videoUrl": "https://www.viddsee.com/video/the-pilgrim/xbiv3"
+      "videoUrl": "https://www.viddsee.com/video/the-pilgrim/xbiv3",
+      "thumbnailPosition": "top"
     },
     {
       "thumbnail": "/assets/uploads/463821408_947738610725397_7091403384228049311_n.jpg",
@@ -254,7 +265,8 @@
       "title": "TAKBAI",
       "client": "Director: Teerawat Rujenatham Editor: Sornphet Wutthikornchaisakul Editing Supervisor: Harin Paesongthai",
       "year": "2025",
-      "videoUrl": "https://www.youtube.com/watch?v=eO6h2hoiV9E"
+      "videoUrl": "https://www.youtube.com/watch?v=eO6h2hoiV9E",
+      "thumbnailPosition": "top"
     },
     {
       "thumbnail": "/assets/uploads/412607772_3558526091069713_8525821297934613199_n.jpg",
