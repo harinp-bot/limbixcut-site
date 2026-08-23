@@ -3,12 +3,13 @@
 
 const CATEGORY_STYLE = {
   "Films":         { color: "#125059", c1: "#0e3a40", c2: "#125059" },
+  "Short Films":   { color: "#09366B", c1: "#06213f", c2: "#09366B" },
   "Series":        { color: "#198CB3", c1: "#0f5c78", c2: "#198CB3" },
   "Commercials":   { color: "#33B3B3", c1: "#1f8080", c2: "#33B3B3" },
   "Music Videos":  { color: "#FF194D", c1: "#b3123a", c2: "#FF194D" }
 };
 const DEFAULT_STYLE = { color: "#125059", c1: "#0e3a40", c2: "#125059" };
-const CATEGORY_ORDER = ["Films", "Series", "Commercials", "Music Videos"];
+const CATEGORY_ORDER = ["Films", "Series", "Commercials", "Short Films", "Music Videos"];
 
 function styleFor(category) {
   return CATEGORY_STYLE[category] || DEFAULT_STYLE;
