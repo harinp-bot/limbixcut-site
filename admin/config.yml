@@ -37,7 +37,8 @@ collections:
               - label: "ประเภท"
                 name: "category"
                 widget: "select"
-                options: ["Films", "Series", "Commercials", "Music Videos"]
+                options: ["Films", "Series", "Commercials", "Short Films", "Music Videos"]
+                hint: "แยก 'Short Films' (หนังสั้น) ออกจาก 'Films' (หนังยาว/ฟีเจอร์) ให้ชัดเจน"
               - { label: "ลูกค้า / แพลตฟอร์ม", name: "client", widget: "string", required: false }
               - label: "ปี"
                 name: "year"
