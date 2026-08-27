@@ -72,7 +72,7 @@
       "client": "Netflix : Director: Nontawat Numbenchapol Editor: Harin Paesongthai",
       "year": "2023",
       "videoUrl": "https://youtu.be/cJKt1Ni-3kk?si=KJLUMy2uGVWQc_ZF",
-      "pinned": true
+      "pinned": false
     },
     {
       "title": "Doctor Climax",
@@ -589,6 +589,16 @@
       "year": "2024",
       "client": "Director: Pom Bunsermvicha Editor: Nisarat Meechok Editing Supervisor: Harin Paesongthai",
       "videoUrl": "https://www.youtube.com/watch?v=gUQTBM4LEIs"
+    },
+    {
+      "pinned": true,
+      "thumbnailPosition": "top",
+      "category": "Series",
+      "title": "Delusion (ภาพลวงตาย)",
+      "client": "Netflix : Director: Chayan Laoyodtrakool Editors: Harin Paesongthai, Frame Wachrakorn Assistant Editor : Sornphet Wutthikornchaisakul",
+      "year": "2026",
+      "videoUrl": "https://www.youtube.com/watch?v=djLRdKDWMk4",
+      "thumbnail": "/assets/uploads/788286064_1787791045686532_7657108439882324334_n.jpeg"
     }
   ]
 }
