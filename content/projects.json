@@ -1,6 +1,16 @@
 {
   "items": [
     {
+      "pinned": true,
+      "thumbnailPosition": "center",
+      "thumbnail": "/assets/uploads/820180809_1650323273183019_7483284948455250266_n.jpeg",
+      "videoUrl": "https://www.youtube.com/watch?v=G1rXvFsOwGM",
+      "year": "2026",
+      "category": "Films",
+      "title": " EXCHANGE เรียน แลก ผี",
+      "client": "Director: ChatChai Hongsirikun Editor: Harin Paesongthai Assistant Editor : Sornphet Wutthikornchaisakul"
+    },
+    {
       "category": "Films",
       "thumbnail": "/assets/uploads/778710834_1370467967934169_7097784521791224232_n.jpeg",
       "title": "นาคี3 ครุฑานาคี (The Cursed War)",
@@ -599,16 +609,6 @@
       "year": "2026",
       "videoUrl": "https://www.youtube.com/watch?v=djLRdKDWMk4",
       "thumbnail": "/assets/uploads/788286064_1787791045686532_7657108439882324334_n.jpeg"
-    },
-    {
-      "pinned": true,
-      "thumbnailPosition": "center",
-      "thumbnail": "/assets/uploads/820180809_1650323273183019_7483284948455250266_n.jpeg",
-      "videoUrl": "https://www.youtube.com/watch?v=G1rXvFsOwGM",
-      "year": "2026",
-      "category": "Films",
-      "title": " EXCHANGE เรียน แลก ผี",
-      "client": "Director: ChatChai Hongsirikun Editor: Harin Paesongthai Assistant Editor : Sornphet Wutthikornchaisakul"
     }
   ]
 }
