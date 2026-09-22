@@ -89,7 +89,7 @@
       "client": "Director: Ekalak Klunson Editor: Harin Paesongthai",
       "year": "2023",
       "videoUrl": "https://youtu.be/qc3r0XAiiK4?si=zoxm-i8uKIWEqDLj",
-      "pinned": true
+      "pinned": false
     },
     {
       "thumbnail": "/assets/uploads/130125616_111812900771793_2179011717701685746_o-967979de77c945728d9766f599035e23.jpg",
@@ -599,6 +599,16 @@
       "year": "2026",
       "videoUrl": "https://www.youtube.com/watch?v=djLRdKDWMk4",
       "thumbnail": "/assets/uploads/788286064_1787791045686532_7657108439882324334_n.jpeg"
+    },
+    {
+      "pinned": true,
+      "thumbnailPosition": "center",
+      "thumbnail": "/assets/uploads/820180809_1650323273183019_7483284948455250266_n.jpeg",
+      "videoUrl": "https://www.youtube.com/watch?v=G1rXvFsOwGM",
+      "year": "2026",
+      "category": "Films",
+      "title": " EXCHANGE เรียน แลก ผี",
+      "client": "Director: ChatChai Hongsirikun Editor: Harin Paesongthai Assistant Editor : Sornphet Wutthikornchaisakul"
     }
   ]
 }
